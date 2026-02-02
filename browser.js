@@ -523,7 +523,7 @@ async function main() {
     setTimeout(() => {
         log(1, "Time's up! Cleaning up...");
         queue.kill();
-        exec('pkill -f node', (err) => {
+        exec('pkill -f bypass.js', (err) => {
             if (err && err.code !== 1) {
                 // Ignore errors
             } else {
